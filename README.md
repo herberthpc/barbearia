@@ -2,7 +2,7 @@
 Sistema de Gestão de Barbearia
 
 
-
+---------
 
 ## Entidades
 - Cliente
@@ -12,27 +12,28 @@ Sistema de Gestão de Barbearia
 - Forma de pagamento
 - Operação (Venda ou Prestação de serviço)
 
+---------
 
 ### Cliente : Pessoa
-Id, Nome, Sexo, DataNasc
+- Id, Nome, Sexo, DataNasc
 
 ### Barbeiro : Pessoa
-Id, CPF, Nome, Login, Admissão
+- Id, CPF, Nome, Login, Admissão
 
 ### ProdutoServico
-Id, Nome, Tipo, CategoriaId, Preço
+- Id, Nome, Tipo (P/S), CategoriaId, Preço
 
 ### Categoria
-Id, Nome
+- Id, Nome
 
 ### FormaPagamento
-Id, Nome, Sigla
+- Id, Nome, Sigla
 
 ### Operação
-Id, DataOperacao, BarbeiroId, ClienteId, Gorjeta, Vale, Desconto, Total
+- Id, BarbeiroId, ClienteId, DataOperacao, ValorBase, Gorjeta, Vale, Desconto, ValorTotal
 
 ### ItensOperação
-Id, OperacaoId, ProdutoId, PreçoUnit, Quantidade, PreçoTotal
+- Id, OperacaoId, ProdutoId, PreçoUnit, Quantidade, PreçoTotal
 
 ### Pagamento
-Id, OperacaoId, FormaPagamentoId, DataPagamento, ValorPago
+- Id, OperacaoId, FormaPagamentoId, DataPagamento, ValorPago

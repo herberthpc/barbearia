@@ -14,31 +14,31 @@ Sistema de Gestão de Barbearia
 ---------
 
 ### Cliente : Pessoa
-- Id, Nome, Sexo, DataNasc
+  - Id, Nome, Sexo, DataNasc
 
 ### Barbeiro : Pessoa
-- Id, CPF, Nome, Login, Admissão
+  - Id, CPF, Nome, Login, Admissão
 
 ### ProdutoServico
-- Id, Nome, Tipo (P/S), CategoriaId, Preço
--- **Categoria** Categoria
+  - Id, Nome, Tipo (P/S), CategoriaId, Preço
+  - **Categoria** Categoria
 ```
   [ForeignKey(nameof(CategoriaId))]
   public virtual **Categoria** Categoria { get; set; }
 ```
   
 ### Categoria
-- Id, Nome
+  - Id, Nome
 
 ### FormaPagamento
-- Id, Nome, Sigla
+  - Id, Nome, Sigla
 
 ### Operação
-- Id, BarbeiroId, ClienteId, DataOperacao, ValorBase, Gorjeta, Vale, Desconto, ValorTotal
--- **Barbeiro** Barbeiro
--- **Cliente** Cliente
--- **IEnumerable<ItensOperacao>** Itens
--- **IEnumerable<Pagamento>** Pagamentos
+  - Id, BarbeiroId, ClienteId, DataOperacao, ValorBase, Gorjeta, Vale, Desconto, ValorTotal
+  - **Barbeiro** Barbeiro
+  - **Cliente** Cliente
+  - **IEnumerable<ItensOperacao>** Itens
+  - **IEnumerable<Pagamento>** Pagamentos
   
 ```
   [ForeignKey(nameof(BarbeiroId))]
@@ -56,9 +56,9 @@ Sistema de Gestão de Barbearia
 
   
 ### ItensOperacao
-- Id, OperacaoId, ProdutoId, PrecoUnit, Quantidade, PrecoTotal
--- **Produto** Produto
--- **Operacao** Operacao
+  - Id, OperacaoId, ProdutoId, PrecoUnit, Quantidade, PrecoTotal
+  - **Produto** Produto
+  - **Operacao** Operacao
 
 ```
   [ForeignKey(nameof(ProdutoId))]
@@ -69,9 +69,9 @@ Sistema de Gestão de Barbearia
 ```
   
 ### Pagamento
-- Id, OperacaoId, FormaPagamentoId, DataPagamento, ValorPago
--- **Operacao** Operacao
--- **FormaPagamento** FormaPagamento 
+  - Id, OperacaoId, FormaPagamentoId, DataPagamento, ValorPago
+  - **Operacao** Operacao
+  - **FormaPagamento** FormaPagamento 
 
 ```
   [ForeignKey(nameof(OperacaoId))]

@@ -15,16 +15,18 @@ Sistema de Gestão de Barbearia
 
 ### Cliente : Pessoa
 - Id, Nome, Sexo, DataNasc
-- *IEnumerable<Operacao>* Operacoes
 
 ### Barbeiro : Pessoa
 - Id, CPF, Nome, Login, Admissão
-- *IEnumerable<Operacao>* Operacoes
 
 ### ProdutoServico
 - Id, Nome, Tipo (P/S), CategoriaId, Preço
--- *Categoria* Categoria
-
+-- **Categoria** Categoria
+`
+  [ForeignKey(nameof(CategoriaId))]
+  public virtual **Categoria** Categoria { get; set; }
+`
+  
 ### Categoria
 - Id, Nome
 
@@ -33,16 +35,51 @@ Sistema de Gestão de Barbearia
 
 ### Operação
 - Id, BarbeiroId, ClienteId, DataOperacao, ValorBase, Gorjeta, Vale, Desconto, ValorTotal
--- *Barbeiro* Barbeiro
--- *Cliente* Cliente
--- *IEnumerable<ItensOperacao>* Itens
+-- **Barbeiro** Barbeiro
+-- **Cliente** Cliente
+-- **IEnumerable<ItensOperacao>** Itens
+-- **IEnumerable<Pagamento>** Pagamentos
+  
+`
+  [ForeignKey(nameof(BarbeiroId))]
+  public virtual **Barbeiro** Barbeiro { get; set; }
+`
+`
+  [ForeignKey(nameof(ClienteId))]
+  public virtual **Cliente** Cliente { get; set; }
+`
+`
+  [InverseProperty(Itens)]
+  public virtual **IEnumerable<ItensOperacao>** Itens { get; set; }
+`
+`
+  [InverseProperty(Itens)]
+  public virtual **IEnumerable<Pagamento>** Pagamentos { get; set; }
+`
 
+  
 ### ItensOperacao
 - Id, OperacaoId, ProdutoId, PrecoUnit, Quantidade, PrecoTotal
--- *Produto* Produto
--- *IEnumerable<Pagamento>* Pagamentos
-
+-- **Produto** Produto
+-- **Operacao** Operacao
+`
+  [ForeignKey(nameof(ProdutoId))]
+  public virtual **Produto** Produto { get; set; }
+`
+`
+  [ForeignKey(nameof(OperacaoId))]
+  public virtual **Operacao** Operacao { get; set; }
+`
+  
 ### Pagamento
 - Id, OperacaoId, FormaPagamentoId, DataPagamento, ValorPago
--- *Operacao* Operacao
--- *FormaPagamento* FormaPagamento 
+-- **Operacao** Operacao
+-- **FormaPagamento** FormaPagamento 
+`
+  [ForeignKey(nameof(OperacaoId))]
+  public virtual **Operacao** Operacao { get; set; }
+`  
+`
+  [ForeignKey(nameof(FormaPagamentoId))]
+  public virtual **FormaPagamento** FormaPagamento { get; set; }
+`

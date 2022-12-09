@@ -7,6 +7,12 @@
 ## 1. Criar o Projeto
 Dentro do Visual Studio ou VS Code
 Abrir o Terminal do VS
+
+Instalar o Entity Framework tools no VS
+```
+dotnet tool install --global dotnet-ef
+```
+
 Criar o projeto
 ```
 dotnet new mvc --auth Individual -o CodeBarberShop -f net6.0
@@ -57,8 +63,9 @@ dotnet tool install -g dotnet-aspnet-codegenerator --version="6.0"
 ![image](https://user-images.githubusercontent.com/20090580/206594632-85e82e87-59c7-48fc-9bc8-81b5b1088d9b.png)
 
 3.4. Usar o Migration para atualizar o Banco de Dados
+No terminal executar os comandos
 ```
-migrations add AddCategorias;
+dotnet migrations add AddCategorias;
 ```
 ```
 dotnet ef database update

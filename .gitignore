@@ -1,0 +1,7 @@
+
+CodeBarberShop/bin/Debug/net6.0/CodeBarberShop.pdb
+CodeBarberShop/bin/Debug/net6.0/cs/Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+*.dll
+*.exe
+*.cache
+*.targets

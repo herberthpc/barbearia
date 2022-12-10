@@ -22,18 +22,24 @@ dotnet new mvc --auth Individual -o CodeBarberShop -f net6.0
 Testar o sistema.
 No Terminal digitar
 ```
-dotnet run
+dotnet run watch
 ```
 Aparecerá uma url para acessarmos o sistema
 Basta clicar nela segurando o Control
 ![image](https://user-images.githubusercontent.com/20090580/206604239-6613a967-1c6e-479c-919d-a5ad31fb3dae.png)
+
 Aparecerá a página Home
+
 ![image](https://user-images.githubusercontent.com/20090580/206604389-8096e641-89d1-4a7d-876a-55fe6cee2bc9.png)
+
 Clique no link [Register] e se cadastre. Irá aparecer um link para confirmar o registro. Clique no link para confirmar.
+
 ![image](https://user-images.githubusercontent.com/20090580/206605603-eb553f20-0ed1-45b4-91c6-433c0af83db1.png)
+
 ![image](https://user-images.githubusercontent.com/20090580/206605729-a7c55c8c-7484-4f26-ac6d-e40b175a99f9.png)
 
 Cique no link [Login] e faça o login com seu usuário e senha
+
 ![image](https://user-images.githubusercontent.com/20090580/206605796-cbff1916-b215-4948-b392-33508e876bbb.png)
 
 Para encerrar, volte no VSCode, clique no terminal e pressione Ctrl+C
@@ -72,7 +78,7 @@ dotnet ef database update
 ```
 3.5 Criar o Contoller de Categoria
 ```
-dotnet-aspnet-codegenerator controller -name Controller/CategoriasController -dc ApplicationDbContext -m Categoria --useDefaultLayout --useSqlite --referenceScriptLibraries
+dotnet-aspnet-codegenerator controller -name CategoriasController -outDir Controllers -dc ApplicationDbContext -m Categoria --useDefaultLayout --useSqlite --referenceScriptLibraries
 ```
 
 3.6 Ajustar o link da página
@@ -85,3 +91,12 @@ Abrir /Controller/CategoriasController
 Modificar o arquivo adicionado o [Authorize]
 
 ![image](https://user-images.githubusercontent.com/20090580/206599774-d0ae5615-3938-4305-af5c-4f58ce4703a6.png)
+
+3.8 Execute o sistema digitando no Terminal
+```
+dotnet run watch
+```
+
+## 4. Criando os demais Cadastros
+Repetir a etapa 3 para cada Classe do projeto
+

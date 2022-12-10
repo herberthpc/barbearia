@@ -65,7 +65,7 @@ dotnet tool install -g dotnet-aspnet-codegenerator --version="6.0"
 3.4. Usar o Migration para atualizar o Banco de Dados
 No terminal executar os comandos
 ```
-dotnet migrations add AddCategorias;
+dotnet ef migrations add AddCategorias;
 ```
 ```
 dotnet ef database update

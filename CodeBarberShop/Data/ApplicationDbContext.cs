@@ -12,4 +12,5 @@ public class ApplicationDbContext : IdentityDbContext
     }
 
     public DbSet<Categoria> Categorias { get; set; }
+    public DbSet<FormaPagamennto> FormaPagamennto { get; set; }
 }

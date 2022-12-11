@@ -10362,19 +10362,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\OmegaRed\\.nuget\\packages\\": {}
+    "C:\\Users\\Haydee\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\OmegaRed\\Documents\\GitHub\\barbearia\\CodeBarberShop\\CodeBarberShop.csproj",
+      "projectUniqueName": "C:\\Users\\Haydee\\Source VS\\Barbearia\\BarbeariaFX\\CodeBarberShop\\CodeBarberShop.csproj",
       "projectName": "CodeBarberShop",
-      "projectPath": "C:\\Users\\OmegaRed\\Documents\\GitHub\\barbearia\\CodeBarberShop\\CodeBarberShop.csproj",
-      "packagesPath": "C:\\Users\\OmegaRed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\OmegaRed\\Documents\\GitHub\\barbearia\\CodeBarberShop\\obj\\",
+      "projectPath": "C:\\Users\\Haydee\\Source VS\\Barbearia\\BarbeariaFX\\CodeBarberShop\\CodeBarberShop.csproj",
+      "packagesPath": "C:\\Users\\Haydee\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Haydee\\Source VS\\Barbearia\\BarbeariaFX\\CodeBarberShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\OmegaRed\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Haydee\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -10442,7 +10442,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
